@@ -81,6 +81,267 @@ nav a:hover {
     font-size: 1.8rem;
 }
 
+/* Boutons du catalogue */
+.catalog-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 30px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--bg);
+    border-color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Catalogue */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.category {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.category h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 15px;
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+.item-count {
+    background: var(--accent);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li small {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #ffc107;
+}
+
+/* Formulaire */
+form {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    margin-top: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin: 0;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+button:hover {
+    background: #1a6fd1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(43, 140, 255, 0.3);
+}
+
+#demo-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+#demo-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Footer */
+.site-footer {
+    padding: 30px 0;
+    text-align: center;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    margin-top: 50px;
+}
+
+/* Utilitaires */
+.hidden {
+    display: none !important;
+}
+
+#form-msg {
+    padding: 15px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    border-left: 4px solid #28a745;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+.site-header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.site-header .tagline {
+    opacity: 0.95;
+    margin: 0 0 20px;
+    font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav a:hover {
+    border-bottom-color: white;
+}
+
+/* Cards */
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: 1.8rem;
+}
+
 /* Catalogue */
 .categories {
     display: grid;
