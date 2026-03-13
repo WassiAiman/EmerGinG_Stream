@@ -34,27 +34,39 @@
         </section>
 
         <!-- Section Catalogue (aperçu) -->
-        <section id="catalog" class="card">
-            <h2>Catalogue (aperçu)</h2>
-            <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
+      <!-- Section Catalogue (aperçu) -->
+<section id="catalog" class="card">
+    <h2>Catalogue (aperçu)</h2>
+    <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
 
-            <div class="categories">
-                <div class="category">
-                    <h3>Films populaires</h3>
-                    <ul id="films-list"></ul>
-                </div>
-                <div class="category">
-                    <h3>Séries populaires</h3>
-                    <ul id="series-list"></ul>
-                </div>
-                <div class="category">
-                    <h3>Anime & animation</h3>
-                    <ul id="anime-list"></ul>
-                </div>
-            </div>
+    <!-- Boutons de filtres -->
+    <div class="catalog-buttons">
+        <button class="filter-btn active" data-category="films">🎬 Films populaires</button>
+        <button class="filter-btn" data-category="series">📺 Séries populaires</button>
+        <button class="filter-btn" data-category="anime">🗾 Anime & animation</button>
+        <button class="filter-btn" data-category="all">📋 Voir tout</button>
+    </div>
 
-            <p class="note">Remarque : cet aperçu montre les titres et catégories disponibles. L'accès aux fichiers complets et au streaming est réservé aux utilisateurs autorisés après contact.</p>
-        </section>
+    <!-- Conteneurs des catalogues -->
+    <div class="categories-container">
+        <div class="category" data-category="films">
+            <h3>🎬 Films populaires</h3>
+            <ul id="films-list"></ul>
+        </div>
+        
+        <div class="category" data-category="series">
+            <h3>📺 Séries populaires</h3>
+            <ul id="series-list"></ul>
+        </div>
+        
+        <div class="category" data-category="anime">
+            <h3>🗾 Anime & animation</h3>
+            <ul id="anime-list"></ul>
+        </div>
+    </div>
+
+    <p class="note">Remarque : cet aperçu montre les titres et catégories disponibles. L'accès aux fichiers complets et au streaming est réservé aux utilisateurs autorisés après contact.</p>
+</section>
 
         <!-- Section Application Android -->
         <section id="app" class="card">
