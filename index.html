@@ -1,0 +1,51 @@
+<section id="catalog" class="card">
+  <h2>Catalogue (aperçu)</h2>
+  <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
+
+  <div class="categories">
+    <div class="category">
+      <h3>Films populaires</h3>
+      <ul id="films-list"></ul>
+    </div>
+    <div class="category">
+      <h3>Séries populaires</h3>
+      <ul id="series-list"></ul>
+    </div>
+    <div class="category">
+      <h3>Anime & animation</h3>
+      <ul id="anime-list"></ul>
+    </div>
+  </div>
+
+  <p class="note">Remarque : cet aperçu montre les titres et catégories disponibles. L'accès aux fichiers complets et au streaming est réservé aux utilisateurs autorisés après contact.</p>
+</section>
+
+<section id="app" class="card">
+  <h2>Android — Présentation de l'application</h2>
+  <p>L'application Android d'EmerGinG_StreminG propose une navigation par catégories, profils pour tous les âges, et un mode basse‑débit optimisé. Elle s'appuie sur Jellyfin côté serveur pour la gestion des bibliothèques et l'encodage adaptatif. Le téléchargement public n'est pas disponible : demandez l'accès via le formulaire.</p>
+  <button id="demo-btn">Demander l'accès à l'application</button>
+</section>
+
+<section id="contact" class="card">
+  <h2>Écrire à l'entreprise</h2>
+  <p>Pour obtenir l'accès complet, demander des partenariats, ou contacter le support technique, envoyez-nous un message :</p>
+  <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+    <label>Nom
+      <input type="text" name="name" required>
+    </label>
+    <label>Email
+      <input type="email" name="_replyto" required>
+    </label>
+    <label>Sujet
+      <input type="text" name="subject">
+    </label>
+    <label>Message
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <label>
+      <input type="checkbox" name="consent" required> J'accepte que mes informations soient utilisées pour traiter ma demande.
+    </label>
+    <button type="submit">Envoyer</button>
+    <p id="form-msg" class="hidden"></p>
+  </form>
+</section>
