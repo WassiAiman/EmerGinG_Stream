@@ -9,10 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>
-        <img src="file_00000000ffac720ea0c677b836eb9d03.png" alt="EmerGinG_StreaminG" style="height: 40px;">
-        Emerging_StreaminG
-    </h1>
     <header class="site-header">
         <div class="container">
             <h1>EmerGinG_StreminG</h1>
@@ -34,7 +30,99 @@
         </section>
 
         <!-- Section Catalogue (aperçu) -->
-      <!-- Section Catalogue (aperçu) -->
+        <section id="catalog" class="card">
+            <h2>Catalogue (aperçu)</h2>
+            <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
+
+            <!-- Boutons de filtres -->
+            <div class="catalog-buttons">
+                <button class="filter-btn active" data-category="all">📋 Voir tout</button>
+                <button class="filter-btn" data-category="films">🎬 Films populaires</button>
+                <button class="filter-btn" data-category="series">📺 Séries populaires</button>
+                <button class="filter-btn" data-category="anime">🗾 Anime & animation</button>
+            </div>
+
+            <!-- Conteneurs des catalogues -->
+            <div class="categories-container">
+                <div class="category" data-category="films">
+                    <h3>🎬 Films populaires <span class="item-count" id="films-count">0</span></h3>
+                    <ul id="films-list">
+                        <li>Chargement...</li>
+                    </ul>
+                </div>
+                
+                <div class="category" data-category="series">
+                    <h3>📺 Séries populaires <span class="item-count" id="series-count">0</span></h3>
+                    <ul id="series-list">
+                        <li>Chargement...</li>
+                    </ul>
+                </div>
+                
+                <div class="category" data-category="anime">
+                    <h3>🗾 Anime & animation <span class="item-count" id="anime-count">0</span></h3>
+                    <ul id="anime-list">
+                        <li>Chargement...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="note">Remarque : cet aperçu montre les titres et catégories disponibles. L'accès aux fichiers complets et au streaming est réservé aux utilisateurs autorisés après contact.</p>
+        </section>
+
+        <!-- Section Application Android -->
+        <section id="app" class="card">
+            <h2>Android — Présentation de l'application</h2>
+            <p>L'application Android d'EmerGinG_StreminG propose une navigation par catégories, profils pour tous les âges, et un mode basse‑débit optimisé. Elle s'appuie sur Jellyfin côté serveur pour la gestion des bibliothèques et l'encodage adaptatif. Le téléchargement public n'est pas disponible : demandez l'accès via le formulaire.</p>
+            <button id="demo-btn">📱 Demander l'accès à l'application</button>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="card">
+            <h2>Écrire à l'entreprise</h2>
+            <p>Pour obtenir l'accès complet, demander des partenariats, ou contacter le support technique, envoyez-nous un message :</p>
+            
+            <!-- REMPLACEZ "your-form-id" par votre vrai ID Formspree -->
+            <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <label>
+                    Nom complet :
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                </label>
+                
+                <label>
+                    Email :
+                    <input type="email" name="_replyto" placeholder="votre@email.com" required>
+                </label>
+                
+                <label>
+                    Sujet :
+                    <input type="text" name="subject" placeholder="Demande d'accès / Partenariat / Support">
+                </label>
+                
+                <label>
+                    Message :
+                    <textarea name="message" rows="5" placeholder="Décrivez votre demande..." required></textarea>
+                </label>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" name="consent" required> 
+                    J'accepte que mes informations soient utilisées pour traiter ma demande.
+                </label>
+                
+                <button type="submit">Envoyer le message</button>
+                <p id="form-msg" class="hidden"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© EmerGinG_StreminG <span id="year"></span> — Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>      <!-- Section Catalogue (aperçu) -->
 <section id="catalog" class="card">
     <h2>Catalogue (aperçu)</h2>
     <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
