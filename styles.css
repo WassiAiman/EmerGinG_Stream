@@ -234,3 +234,76 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Boutons du catalogue */
+.catalog-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 30px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--bg);
+    border-color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Animation des catégories */
+.categories-container {
+    position: relative;
+    min-height: 300px;
+}
+
+.category {
+    transition: opacity 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.category.hidden {
+    display: none;
+}
+
+.category.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.category.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style des compteurs */
+.category h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-count {
+    background: var(--accent-light);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
