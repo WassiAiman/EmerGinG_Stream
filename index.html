@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmerGinG_StreminG</title>
+    
+    <!-- Police simple et propre -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icônes (optionnel, on peut les enlever si vous voulez) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Notre CSS (on le créera après) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 
+        STRUCTURE SIMPLE :
+        1. Barre de menu (header)
+        2. Section Accueil avec image de fond
+        3. Section À propos
+        4. Section Catalogue
+        5. Section Beta Testeur
+        6. Section Commentaires
+        7. Footer avec réseaux sociaux
+    -->
 
+    <!-- 1. HEADER / MENU -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo à gauche -->
+                <div class="logo">
+                    <span class="logo-text">EmerGinG<span class="accent">_StreminG</span></span>
+                </div>
+                
+                <!-- Menu de navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                        <li><a href="#apropos" class="nav-link">À propos</a></li>
+                        <li><a href="#catalogue" class="nav-link">Catalogue</a></li>
+                        <li><a href="#beta" class="nav-link">Beta testeur</a></li>
+                        <li><a href="#commentaires" class="nav-link">Commentaires</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Menu burger pour mobile (on le gérera plus tard) -->
+                <button class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. SECTION ACCUEIL avec image de fond -->
+    <section id="accueil" class="hero">
+        <!-- L'image de fond sera mise dans le CSS -->
+        <div class="hero-overlay"></div> <!-- Pour assombrir l'image -->
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">EmerGinG_StreminG</h1>
+                <p class="hero-text">Streaming optimisé pour connexions lentes • Films • Séries • Animés</p>
+                <a href="#beta" class="btn btn-primary">Devenir beta testeur</a>
+            </div>
+        </div>
+        
+        <!-- Petits indicateurs pour le défilement d'images -->
+        <div class="hero-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+        </div>
+    </section>
+
+    <!-- 3. SECTION À PROPOS -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-grid">
+                <!-- Texte principal -->
+                <div class="about-text">
+                    <p class="lead">EmerGinG_StreminG regroupe les contenus les plus populaires issus des grandes plateformes de streaming et les rend accessibles via une interface unique.</p>
+                    <p>Notre différence : une optimisation pour connexions internet lentes, une large offre tous âges et genres, et une architecture basée sur Jellyfin.</p>
+                </div>
+                
+                <!-- 3 points clés en chiffres -->
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Films</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Séries</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Animés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION CATALOGUE (catégories) -->
+    <section id="catalogue" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Notre catalogue</h2>
+            <p class="section-subtitle">Découvrez nos différentes catégories de contenus</p>
+            
+            <div class="catalog-grid">
+                <!-- Catégorie 1 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">🎬</div>
+                    <h3>Films</h3>
+                    <p>Blockbusters, films indépendants, classiques</p>
+                </div>
+                
+                <!-- Catégorie 2 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">📺</div>
+                    <h3>Séries</h3>
+                    <p>Séries populaires, exclusivités, originals</p>
+                </div>
+                
+                <!-- Catégorie 3 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">🗾</div>
+                    <h3>Animés</h3>
+                    <p>Animés populaires, classiques, dernières sorties</p>
+                </div>
+                
+                <!-- Catégorie 4 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">👶</div>
+                    <h3>Jeunesse</h3>
+                    <p>Dessins animés, programmes éducatifs</p>
+                </div>
+                
+                <!-- Catégorie 5 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">📚</div>
+                    <h3>Documentaires</h3>
+                    <p>Nature, science, histoire, société</p>
+                </div>
+                
+                <!-- Catégorie 6 -->
+                <div class="catalog-item">
+                    <div class="catalog-icon">🎵</div>
+                    <h3>Concerts</h3>
+                    <p>Concerts live, festivals, performances</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION BETA TESTEUR -->
+    <section id="beta" class="section">
+        <div class="container">
+            <div class="beta-box">
+                <div class="beta-info">
+                    <h2 class="section-title">Devenez beta testeur</h2>
+                    <p class="beta-highlight">🚀 Lancement officiel : Juin 2026</p>
+                    <p class="beta-text">La plateforme est actuellement en développement. Inscrivez-vous pour tester gratuitement et bénéficier d'un compte à vie !</p>
+                    
+                    <!-- Petite liste d'avantages -->
+                    <ul class="beta-list">
+                        <li>✓ Accès anticipé</li>
+                        <li>✓ Compte gratuit à vie</li>
+                        <li>✓ Support prioritaire</li>
+                    </ul>
+                </div>
+                
+                <!-- Formulaire simple -->
+                <form class="beta-form" id="betaForm">
+                    <h3>Rejoindre la beta</h3>
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+                    <p class="form-note">Gratuit - Sans engagement</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION COMMENTAIRES -->
+    <section id="commentaires" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Ils nous font confiance</h2>
+            
+            <div class="comments-grid">
+                <!-- Commentaire 1 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <strong>Thomas M.</strong>
+                        <span class="comment-date">Beta testeur</span>
+                    </div>
+                    <p>"Super expérience, même avec une connexion moyenne ça fonctionne parfaitement !"</p>
+                    <div class="comment-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <!-- Commentaire 2 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <strong>Sophie D.</strong>
+                        <span class="comment-date">Beta testeur</span>
+                    </div>
+                    <p>"Catalogue très varié, j'ai découvert plein de films intéressants."</p>
+                    <div class="comment-rating">⭐⭐⭐⭐</div>
+                </div>
+                
+                <!-- Commentaire 3 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <strong>Lucas P.</strong>
+                        <span class="comment-date">Beta testeur</span>
+                    </div>
+                    <p>"L'application Android est intuitive et le mode hors-ligne est top !"</p>
+                    <div class="comment-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+            
+            <!-- Formulaire pour laisser un commentaire -->
+            <div class="comment-form">
+                <h3>Laissez votre avis</h3>
+                <form id="commentForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Votre nom" required>
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <textarea rows="3" placeholder="Votre commentaire..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER avec réseaux sociaux -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo + description -->
+                <div class="footer-info">
+                    <div class="footer-logo">EmerGinG_StreminG</div>
+                    <p>Streaming optimisé pour tous</p>
+                </div>
+                
+                <!-- Liens rapides -->
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#catalogue">Catalogue</a></li>
+                        <li><a href="#beta">Beta</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Réseaux sociaux (simples) -->
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💬</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 EmerGinG_StreminG - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript simple -->
+    <script src="script.js"></script>
+</body>
+</html>
