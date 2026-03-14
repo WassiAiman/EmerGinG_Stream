@@ -3,38 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmerGinG_StreminG - Streaming optimisé</title>
-    <meta name="description" content="Plateforme de streaming optimisée pour connexions lentes - Contenus populaires tous âges">
+    <title>EmerGinG_StreminG - Streaming Optimisé</title>
+    <meta name="description" content="Plateforme de streaming optimisée pour connexions lentes - Lancement Juin 2026">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1>EmerGinG_StreminG</h1>
-            <p class="tagline">Toutes les nouveautés et les plus populaires, optimisées pour connexions lentes</p>
-            <nav>
-                <a href="#about">À propos</a>
-                <a href="#catalog">Catalogue</a>
-                <a href="#app">Android App</a>
-                <a href="#contact">Écrire à l'entreprise</a>
-            </nav>
+    <!-- Barre de navigation fixe -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/40x40/2b8cff/ffffff?text=EGS" alt="EmerGinG_StreminG" class="logo-img">
+                <span class="logo-text">EmerGinG<span class="highlight">_StreminG</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#catalog" class="nav-link">Catalogue</a></li>
+                <li><a href="#beta" class="nav-link">Beta testeur</a></li>
+                <li><a href="#comments" class="nav-link">Commentaires</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <!-- Section À propos -->
-        <section id="about" class="card">
-            <h2>À propos d'EmerGinG_StreminG</h2>
-            <p>EmerGinG_StreminG regroupe les contenus les plus populaires issus des grandes plateformes de streaming (Netflix, Prime Video, Disney+, Crunchyroll, etc.) et les rend accessibles via une interface unique. Notre différence : une optimisation pour connexions internet lentes, une large offre tous âges et genres, et une architecture basée sur le logiciel open‑source Jellyfin. Nous utilisons des méthodes avancées d'encodage adaptatif et de mise en cache pour garantir une lecture fluide même avec une bande passante limitée.</p>
-        </section>
+    <!-- Section Hero avec défilement d'images -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h1>EmerGinG_StreminG</h1>
+                    <p>Le streaming accessible à tous, optimisé pour connexions lentes</p>
+                    <a href="#beta" class="cta-button">Devenir beta testeur</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h2>Films, Séries, Animés</h2>
+                    <p>Des milliers de contenus populaires réunis en un seul endroit</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1578022760307-3d8a5a4e4c3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
+                <div class="slide-content">
+                    <h2>Optimisation spéciale</h2>
+                    <p>Lecture fluide même avec une connexion limitée</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+            <button class="slider-dot"></button>
+        </div>
+    </section>
 
-        <!-- Section Catalogue (aperçu) -->
-        <section id="catalog" class="card">
-            <h2>Catalogue (aperçu)</h2>
-            <p>Ci‑dessous : aperçu des contenus disponibles sur la plateforme. Pour accéder au service complet ou obtenir l'application Android, merci d'écrire à l'entreprise via le formulaire en bas.</p>
+    <!-- Section À propos -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos d'EmerGinG_StreminG</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">EmerGinG_StreminG regroupe les contenus les plus populaires issus des grandes plateformes de streaming et les rend accessibles via une interface unique, avec une optimisation spéciale pour les connexions internet lentes.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-rocket fa-3x" style="color: var(--accent);"></i>
+                            <h3>Optimisation avancée</h3>
+                            <p>Encodage adaptatif et mise en cache pour une lecture fluide même avec une bande passante limitée.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart fa-3x" style="color: var(--accent);"></i>
+                            <h3>Contenu tous âges</h3>
+                            <p>Une large offre pour toute la famille, des plus petits aux plus grands.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-film fa-3x" style="color: var(--accent);"></i>
+                            <h3>Basé sur Jellyfin</h3>
+                            <p>Architecture open-source robuste pour une expérience de streaming fiable.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe fa-3x" style="color: var(--accent);"></i>
+                            <h3>Multi-plateformes</h3>
+                            <p>Accédez à vos contenus depuis n'importe quel appareil, partout dans le monde.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Boutons de filtres -->
+    <!-- Section Catalogue -->
+    <section id="catalog" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Notre Catalogue</h2>
+            <p class="section-subtitle">Découvrez un aperçu de nos catégories de contenus</p>
+            
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Films</h3>
+                    <p>Blockbusters, films indépendants, classiques du cinéma</p>
+                    <span class="catalog-badge">+500 films</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Séries</h3>
+                    <p>Séries populaires, exclusivités, productions originales</p>
+                    <span class="catalog-badge">+200 séries</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Animés</h3>
+                    <p>Animés populaires, classiques, dernières sorties</p>
+                    <span class="catalog-badge">+1000 épisodes</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Jeunesse</h3>
+                    <p>Dessins animés, programmes éducatifs, contenu familial</p>
+                    <span class="catalog-badge">+300 programmes</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Documentaires</h3>
+                    <p>Nature, science, histoire, société</p>
+                    <span class="catalog-badge">+150 docs</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Concerts</h3>
+                    <p>Concerts live, festivals, performances exclusives</p>
+                    <span class="catalog-badge">+80 concerts</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Originals</h3>
+                    <p>Créations originales EmerGinG_StreminG</p>
+                    <span class="catalog-badge">+50 exclusivités</span>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="catalog-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>International</h3>
+                    <p>Contenus du monde entier, dramas, séries internationales</p>
+                    <span class="catalog-badge">+200 titres</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Beta Testeur -->
+    <section id="beta" class="section">
+        <div class="container">
+            <div class="beta-container">
+                <div class="beta-info">
+                    <h2 class="section-title">Devenez Beta Testeur</h2>
+                    <div class="beta-badge">GRATUIT</div>
+                    <p class="lead">La plateforme est actuellement en développement et sera officiellement disponible en <strong>Juin 2026</strong>.</p>
+                    
+                    <div class="beta-features">
+                        <div class="beta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Accès anticipé à toutes les fonctionnalités</span>
+                        </div>
+                        <div class="beta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Compte gratuit à vie pour les premiers testeurs</span>
+                        </div>
+                        <div class="beta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Participez à l'amélioration de la plateforme</span>
+                        </div>
+                        <div class="beta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Support prioritaire</span>
+                        </div>
+                    </div>
+                    
+                    <div class="beta-countdown">
+                        <h3>Lancement officiel dans :</h3>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">365</span>
+                                <span>jours</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">24</span>
+                                <span>heures</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">60</span>
+                                <span>minutes</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds">60</span>
+                                <span>secondes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="beta-form">
+                    <h3>Devenir beta testeur</h3>
+                    <form id="beta-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nom complet" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="_replyto" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="device" required>
+                                <option value="">Appareil principal</option>
+                                <option value="android">Android</option>
+                                <option value="ios">iOS</option>
+                                <option value="web">Navigateur web</option>
+                                <option value="tv">Smart TV</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="3" placeholder="Pourquoi voulez-vous devenir beta testeur ?"></textarea>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="beta-consent" name="consent" required>
+                            <label for="beta-consent">J'accepte de recevoir des informations sur la beta</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Rejoindre la beta</button>
+                        <p id="beta-msg" class="hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Commentaires -->
+    <section id="comments" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Ce que disent nos testeurs</h2>
+            
+            <div class="comments-grid">
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <h4>Thomas Martin</h4>
+                            <div class="comment-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">"Incroyable ! Même avec ma connexion 3G, la lecture est fluide. Hâte de voir la version finale en 2026."</p>
+                    <span class="comment-date">Beta testeur - Mars 2026</span>
+                </div>
+                
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <h4>Sophie Dubois</h4>
+                            <div class="comment-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">"Le catalogue est très varié, je suis impressionnée par la qualité des animés disponibles. Super initiative !"</p>
+                    <span class="comment-date">Beta testeur - Février 2026</span>
+                </div>
+                
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <h4>Lucas Petit</h4>
+                            <div class="comment-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment-text">"L'application Android est très intuitive. Le mode hors-ligne va changer ma vie dans les transports !"</p>
+                    <span class="comment-date">Beta testeur - Mars 2026</span>
+                </div>
+            </div>
+            
+            <!-- Formulaire pour laisser un commentaire -->
+            <div class="comment-form-container">
+                <h3>Laissez votre avis</h3>
+                <form id="comment-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="comment-name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="comment-email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select name="comment-rating">
+                            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ - Très bien</option>
+                            <option value="3">⭐⭐⭐ - Bien</option>
+                            <option value="2">⭐⭐ - Moyen</option>
+                            <option value="1">⭐ - À améliorer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="comment-message" rows="4" placeholder="Votre commentaire..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Publier mon avis</button>
+                    <p id="comment-msg" class="hidden"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer avec réseaux sociaux -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="https://via.placeholder.com/60x60/2b8cff/ffffff?text=EGS" alt="EmerGinG_StreminG" class="footer-logo">
+                    <p>Le streaming optimisé pour tous, partout.</p>
+                    <p class="copyright">© 2026 EmerGinG_StreminG. Tous droits réservés.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#catalog">Catalogue</a></li>
+                        <li><a href="#beta">Beta testeur</a></li>
+                        <li><a href="#comments">Commentaires</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Restez informé</h4>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>            <!-- Boutons de filtres -->
             <div class="catalog-buttons">
                 <button class="filter-btn active" data-category="all">📋 Voir tout</button>
                 <button class="filter-btn" data-category="films">🎬 Films populaires</button>
