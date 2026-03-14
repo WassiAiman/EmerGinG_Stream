@@ -1,40 +1,178 @@
-// VOTRE CATALOGUE - Personnalisez ici !
-const films = [
-    {title: "Dune : Deuxième partie", source: "Netflix", year: 2024},
-    {title: "Poor Things", source: "Disney+", year: 2024},
-    {title: "The Batman", source: "Prime Video", year: 2022},
-    {title: "Oppenheimer", source: "Peacock", year: 2023},
-    {title: "Wonka", source: "HBO Max", year: 2023},
-    {title: "Kung Fu Panda 4", source: "DreamWorks", year: 2024},
-    {title: "Godzilla x Kong", source: "HBO", year: 2024},
-    {title: "Madame Web", source: "Netflix", year: 2024}
-];
+// Navigation mobile
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-const series = [
-    {title: "The Last of Us", source: "HBO", seasons: 1},
-    {title: "Shōgun", source: "FX/Hulu", seasons: 1},
-    {title: "The Bear", source: "Disney+", seasons: 2},
-    {title: "Fallout", source: "Prime Video", seasons: 1},
-    {title: "House of the Dragon", source: "HBO", seasons: 2},
-    {title: "The Boys", source: "Prime Video", seasons: 4},
-    {title: "Stranger Things", source: "Netflix", seasons: 4}
-];
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-const anime = [
-    {title: "Solo Leveling", source: "Crunchyroll", episodes: 12},
-    {title: "Frieren", source: "Crunchyroll", episodes: 28},
-    {title: "Demon Slayer", source: "Crunchyroll", episodes: 55},
-    {title: "Jujutsu Kaisen", source: "Crunchyroll", episodes: 47},
-    {title: "One Piece", source: "Crunchyroll", episodes: 1089},
-    {title: "Attack on Titan", source: "Crunchyroll", episodes: 87},
-    {title: "Spy x Family", source: "Crunchyroll", episodes: 37},
-    {title: "Chainsaw Man", source: "Crunchyroll", episodes: 12}
-];
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
 
-// Fonction pour afficher les listes
-function renderList(arr, elId) {
-    const ul = document.getElementById(elId);
-    if (!ul) return;
+// Slider automatique
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Changer de slide toutes les 5 secondes
+setInterval(nextSlide, 5000);
+
+// Navigation par points
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+});
+
+// Highlight du lien actif pendant le scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Effet de scroll sur la navbar
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Compte à rebours jusqu'en Juin 2026
+function updateCountdown() {
+    const launchDate = new Date('June 1, 2026 00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+
+// Gestionnaire formulaire beta
+const betaForm = document.getElementById('beta-form');
+const betaMsg = document.getElementById('beta-msg');
+
+if (betaForm) {
+    betaForm.addEventListener('submit', (e) => {
+        setTimeout(() => {
+            betaMsg.classList.remove('hidden');
+            betaMsg.textContent = '✓ Merci de rejoindre la beta ! Nous vous contacterons bientôt.';
+            betaMsg.style.color = '#28a745';
+            betaForm.reset();
+            
+            setTimeout(() => {
+                betaMsg.classList.add('hidden');
+            }, 5000);
+        }, 100);
+    });
+}
+
+// Gestionnaire formulaire commentaires
+const commentForm = document.getElementById('comment-form');
+const commentMsg = document.getElementById('comment-msg');
+
+if (commentForm) {
+    commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        commentMsg.classList.remove('hidden');
+        commentMsg.textContent = '✓ Merci pour votre avis ! Il sera publié après modération.';
+        commentMsg.style.color = '#28a745';
+        commentForm.reset();
+        
+        setTimeout(() => {
+            commentMsg.classList.add('hidden');
+        }, 5000);
+    });
+}
+
+// Newsletter
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Merci de vous être abonné à notre newsletter !');
+        newsletterForm.reset();
+    });
+}
+
+// Animation au scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.feature, .catalog-card, .comment-card').forEach(el => {
+    observer.observe(el);
+});
+
+// Ajouter une classe pour les animations
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        .feature, .catalog-card, .comment-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+`);    if (!ul) return;
     
     if (arr.length === 0) {
         ul.innerHTML = '<li class="empty-message">Aucun contenu disponible</li>';
